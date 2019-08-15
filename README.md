@@ -1,7 +1,7 @@
 React-geo-api
 =============
 
-##Cross-platform interactive react application with bootstrap4.
+### Cross-platform interactive react application with bootstrap4.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
