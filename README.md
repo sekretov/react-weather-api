@@ -1,4 +1,4 @@
-React-geo-api
+React-weather-api
 =============
 
 ### Cross-platform interactive react application with bootstrap4.
