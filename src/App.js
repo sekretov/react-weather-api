@@ -48,16 +48,19 @@ class App extends React.Component {
         })
         return;
       }
+      let timezone = data.timezone;
+      let dateTimezone = new Date();
+      dateTimezone.setTime(timezone)
 
       let sunrise = data.sys.sunrise;
       let dateRise = new Date();
       dateRise.setTime(sunrise);
-      let sunrise_time = dateRise.getHours() + ':' + dateRise.getMinutes() + ':' + dateRise.getSeconds();
+      let sunrise_time = dateRise.getHours() + dateTimezone.getHours() -12 + ':' + dateRise.getMinutes() + ':' + dateRise.getSeconds();
 
       let sunset = data.sys.sunset;
       let date = new Date();
       date.setTime(sunset);
-      let sunset_time = date.getHours()+12 + ':' + date.getMinutes() + ':' + date.getSeconds();
+      let sunset_time = date.getHours() + dateTimezone.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
     
       this.setState({
         temp: parseInt(data.main.temp - 273.15),
